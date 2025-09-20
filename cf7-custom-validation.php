@@ -2,7 +2,7 @@
 /**
  * Plugin Name: CF7 Custom Validation Messages
  * Description: Customize validation messages for each Contact Form 7 field
- * Version: 1.1.0
+ * Version: 1.1.1
  * Requires at least: 5.8
  * Requires PHP: 7.4
  * Author: simmotorlp
