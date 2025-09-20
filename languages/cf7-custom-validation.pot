@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: CF7 Custom Validation Messages 1.1.0\n"
+"Project-Id-Version: Validation Muse for Contact Form 7 1.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cf7-custom-validation\n"
 "POT-Creation-Date: 2024-05-05 00:00:00+0000\n"
 "MIME-Version: 1.0\n"
@@ -9,39 +9,39 @@ msgstr ""
 "X-Generator: Codex CLI\n"
 "X-Domain: cf7-custom-validation\n"
 
-#: cf7-custom-validation.php:38
+#: cf7-custom-validation.php:29
 msgid "This plugin requires Contact Form 7 to be installed and activated."
 msgstr ""
 
-#: cf7-custom-validation.php:39
+#: cf7-custom-validation.php:30
 msgid "Plugin dependency check"
 msgstr ""
 
-#: cf7-custom-validation.php:56
-msgid "CF7 Custom Validation requires Contact Form 7 plugin to be installed and activated. %1$sInstall Contact Form 7%2$s"
+#: cf7-custom-validation.php:48
+msgid "Validation Muse requires Contact Form 7 to be installed and activated. %1$sInstall Contact Form 7%2$s"
 msgstr ""
 
 #: includes/class-admin.php:44
 msgid "Custom Validation"
 msgstr ""
 
-#: includes/class-admin.php:146
+#: includes/class-admin.php:150
 msgid "Please enter a valid email address"
 msgstr ""
 
-#: includes/class-admin.php:147
+#: includes/class-admin.php:151
 msgid "Please enter a valid URL"
 msgstr ""
 
-#: includes/class-admin.php:148
+#: includes/class-admin.php:152
 msgid "Please enter a valid phone number"
 msgstr ""
 
-#: includes/class-admin.php:149 includes/class-admin.php:150
+#: includes/class-admin.php:153 includes/class-admin.php:154
 msgid "Please enter a valid number"
 msgstr ""
 
-#: includes/class-admin.php:151
+#: includes/class-admin.php:155
 msgid "Please enter a valid date"
 msgstr ""
 

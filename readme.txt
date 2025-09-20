@@ -1,15 +1,17 @@
-=== CF7 Custom Validation Messages ===
+=== Validation Muse for Contact Form 7 ===
 Contributors: simmotorlp
 Tags: contact form 7, validation, forms, messages, customization
 Requires at least: 5.8
-Tested up to: 6.8.2
+Tested up to: 6.8
 Requires PHP: 7.4
 Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
+Fine-tune the validation copy for every Contact Form 7 field directly inside the form editor.
+
 == Description ==
-CF7 Custom Validation Messages lets you override the default error copy that Contact Form 7 displays. Enable the plugin per form, then supply custom text for required notices and invalid email, URL, telephone, number, range, and date validation. Messages are stored in post meta so they stay with the form when you export/import.
+Validation Muse for Contact Form 7 lets you override the default error copy that Contact Form 7 displays. Enable the plugin per form, then supply custom text for required notices and invalid email, URL, telephone, number, range, and date validation. Messages are stored in post meta so they stay with the form when you export/import.
 
 == Installation ==
 1. Upload the `cf7-custom-validation` folder to `/wp-content/plugins/`, or install it from the WordPress admin under Plugins → Add New.

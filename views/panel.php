@@ -1,43 +1,43 @@
 <?php defined('ABSPATH') || exit; ?>
 
-<div class="cf7cv-panel">
-    <div class="cf7cv-enable-toggle">
+<div class="vmcf7-panel">
+    <div class="vmcf7-enable-toggle">
         <label>
             <input type="checkbox"
-                   name="cf7cv_enabled"
+                   name="vmcf7_enabled"
                    value="1"
                 <?php checked($enabled, 1); ?>>
-            <?php esc_html_e('Enable custom validation messages for this form', 'cf7-custom-validation'); ?>
+            <?php esc_html_e('Enable custom validation messages for this form', 'validation-muse-for-contact-form-7'); ?>
         </label>
     </div>
 
     <?php if (!empty($fields)): ?>
-    <table class="cf7cv-fields-table">
+    <table class="vmcf7-fields-table">
         <thead>
         <tr>
-            <th><?php esc_html_e('Field', 'cf7-custom-validation'); ?></th>
-            <th><?php esc_html_e('Required Message', 'cf7-custom-validation'); ?></th>
-            <th><?php esc_html_e('Invalid Format Message', 'cf7-custom-validation'); ?></th>
+            <th><?php esc_html_e('Field', 'validation-muse-for-contact-form-7'); ?></th>
+            <th><?php esc_html_e('Required Message', 'validation-muse-for-contact-form-7'); ?></th>
+            <th><?php esc_html_e('Invalid Format Message', 'validation-muse-for-contact-form-7'); ?></th>
         </tr>
         </thead>
         <tbody>
         <?php foreach ($fields as $field): ?>
             <tr>
                 <td>
-                    <div class="cf7cv-field-name"><?php echo esc_html($field['name']); ?></div>
-                    <div class="cf7cv-field-type"><?php echo esc_html($field['type']); ?></div>
+                    <div class="vmcf7-field-name"><?php echo esc_html($field['name']); ?></div>
+                    <div class="vmcf7-field-type"><?php echo esc_html($field['type']); ?></div>
                 </td>
                 <td>
                     <input type="text"
-                           name="cf7cv[<?php echo esc_attr($field['name']); ?>][required]"
+                           name="vmcf7[<?php echo esc_attr($field['name']); ?>][required]"
                            value="<?php echo esc_attr($field['required_message']); ?>"
                            class="large-text"
-                           placeholder="<?php esc_attr_e('This field is required', 'cf7-custom-validation'); ?>">
+                           placeholder="<?php esc_attr_e('This field is required', 'validation-muse-for-contact-form-7'); ?>">
                 </td>
                 <td>
                     <?php if (in_array($field['type'], ['email', 'url', 'tel', 'number', 'range', 'date'], true)): ?>
                         <input type="text"
-                               name="cf7cv[<?php echo esc_attr($field['name']); ?>][invalid]"
+                               name="vmcf7[<?php echo esc_attr($field['name']); ?>][invalid]"
                                value="<?php echo esc_attr($field['invalid_message']); ?>"
                                class="large-text"
                                placeholder="<?php echo esc_attr($this->get_default_invalid_message($field['type'])); ?>">
@@ -48,10 +48,10 @@
         </tbody>
     </table>
     <?php else: ?>
-        <div class="cf7cv-no-fields">
-            <?php esc_html_e('No required fields found in this form.', 'cf7-custom-validation'); ?>
+        <div class="vmcf7-no-fields">
+            <?php esc_html_e('No required fields found in this form.', 'validation-muse-for-contact-form-7'); ?>
         </div>
     <?php endif; ?>
 
-    <?php wp_nonce_field('cf7cv_save_messages', 'cf7cv_nonce'); ?>
+    <?php wp_nonce_field('vmcf7_save_messages', 'vmcf7_nonce'); ?>
 </div>

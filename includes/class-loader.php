@@ -3,7 +3,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-class CF7CV_Loader {
+class VMCF7_Loader {
     public function init() {
         require_once __DIR__ . '/class-admin.php';
 
@@ -13,7 +13,7 @@ class CF7CV_Loader {
         }
 
         if (is_admin()) {
-            $admin = new CF7CV_Admin();
+            $admin = new VMCF7_Admin();
             add_action('admin_enqueue_scripts', [$admin, 'enqueue_scripts']);
             add_filter('wpcf7_editor_panels', [$admin, 'add_panel']);
             add_action('wpcf7_save_contact_form', [$admin, 'save_messages']);
@@ -94,27 +94,32 @@ class CF7CV_Loader {
     }
 
     private function get_posted_value($tag) {
-        $name = $tag->name;
-
-        if ('file' === $tag->basetype) {
-            if (!isset($_FILES[$name])) {
-                return null;
-            }
-
-            $file = $_FILES[$name];
-
-            if (isset($file['tmp_name']) && is_array($file['tmp_name'])) {
-                return array_values(array_filter(array_map('strval', $file['tmp_name']), 'strlen'));
-            }
-
-            return !empty($file['tmp_name']) ? (string) $file['tmp_name'] : '';
-        }
-
-        if (!isset($_POST[$name])) {
+        $submission = WPCF7_Submission::get_instance();
+        if (!$submission) {
             return null;
         }
 
-        $value = $_POST[$name];
+        $name = $tag->name;
+
+        if ('file' === $tag->basetype) {
+            $files = $submission->uploaded_files();
+            if (!isset($files[$name])) {
+                return null;
+            }
+
+            $file = $files[$name];
+
+            if (is_array($file)) {
+                return array_values(array_filter(array_map('strval', $file), 'strlen'));
+            }
+
+            return (string) $file;
+        }
+
+        $value = $submission->get_posted_data($name);
+        if (null === $value) {
+            return null;
+        }
 
         if (is_array($value)) {
             $value = array_map('wp_unslash', $value);
@@ -138,7 +143,7 @@ class CF7CV_Loader {
     }
 
     private function is_enabled($form_id) {
-        return '1' === get_post_meta($form_id, '_cf7cv_enabled', true);
+        return '1' === get_post_meta($form_id, '_vmcf7_enabled', true);
     }
 
     private function get_custom_message($form_id, $field_name, $type) {
@@ -149,7 +154,7 @@ class CF7CV_Loader {
             return '';
         }
 
-        $meta_key = sprintf('_cf7cv_%s_%s', $field_name, $type);
+        $meta_key = sprintf('_vmcf7_%s_%s', $field_name, $type);
         $message = get_post_meta($form_id, $meta_key, true);
 
         return is_string($message) ? $message : '';
