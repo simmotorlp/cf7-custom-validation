@@ -1,0 +1,70 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CF7 Custom Validation Messages 1.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cf7-custom-validation\n"
+"POT-Creation-Date: 2024-05-05 00:00:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Codex CLI\n"
+"X-Domain: cf7-custom-validation\n"
+
+#: cf7-custom-validation.php:38
+msgid "This plugin requires Contact Form 7 to be installed and activated."
+msgstr ""
+
+#: cf7-custom-validation.php:39
+msgid "Plugin dependency check"
+msgstr ""
+
+#: cf7-custom-validation.php:56
+msgid "CF7 Custom Validation requires Contact Form 7 plugin to be installed and activated. %1$sInstall Contact Form 7%2$s"
+msgstr ""
+
+#: includes/class-admin.php:44
+msgid "Custom Validation"
+msgstr ""
+
+#: includes/class-admin.php:146
+msgid "Please enter a valid email address"
+msgstr ""
+
+#: includes/class-admin.php:147
+msgid "Please enter a valid URL"
+msgstr ""
+
+#: includes/class-admin.php:148
+msgid "Please enter a valid phone number"
+msgstr ""
+
+#: includes/class-admin.php:149 includes/class-admin.php:150
+msgid "Please enter a valid number"
+msgstr ""
+
+#: includes/class-admin.php:151
+msgid "Please enter a valid date"
+msgstr ""
+
+#: views/panel.php:10
+msgid "Enable custom validation messages for this form"
+msgstr ""
+
+#: views/panel.php:18
+msgid "Field"
+msgstr ""
+
+#: views/panel.php:19
+msgid "Required Message"
+msgstr ""
+
+#: views/panel.php:20
+msgid "Invalid Format Message"
+msgstr ""
+
+#: views/panel.php:35
+msgid "This field is required"
+msgstr ""
+
+#: views/panel.php:52
+msgid "No required fields found in this form."
+msgstr ""
