@@ -4,7 +4,7 @@ Tags: contact form 7, validation, forms, messages, customization
 Requires at least: 5.8
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +30,9 @@ Email, URL, telephone, number (including range), and date tags can display custo
 Messages are saved in each form's post meta. They are included in Contact Form 7 exports, so migrating a form will move the messages with it.
 
 == Changelog ==
+
+= 1.1.2 =
+* Changed plugin name.
 
 = 1.1.1 =
 * Added .gitignore file.
